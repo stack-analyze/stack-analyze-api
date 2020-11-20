@@ -17,9 +17,6 @@ app.use(express.json());
 app.use('/stack', require('./routes/stack'));
 app.use('/whois', require('./routes/domain'));
 
-// static files
-app.use(express.static(join(__dirname, 'public')));
-
 // export
 module.exports = app;
 
