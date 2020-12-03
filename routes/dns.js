@@ -7,14 +7,15 @@ const router = Router()
 
 // route
 router.get('/', (req, res) => {
-  const { url } = req.query;
-
-try {
+  
   whois.lookup(url, (err, data) => {
-    const domain = data.split('\r\n').slice(0, 8);
-    res.status(200).json( domain || err );
+    const { url } = req.query;
+    
+    if(url !== '') {
+     const domain = data.split('\r\n').slice(0, 8);
+     res.status(200).json( domain );
+    } else { res.status(500).json({ msg: err.message }); }
   });
-  } catch (err) { res.status(500).json({ msg: err.message }); }
 });
 
 // exports
