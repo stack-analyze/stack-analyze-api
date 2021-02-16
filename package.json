@@ -2,6 +2,7 @@
   "name": "stack-analyze-api",
   "version": "1.0.0",
   "description": "api open source for mobile/pwa or other devices",
+  "keywords": ["api", "stack-analyze", "api pwa"],
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
