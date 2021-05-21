@@ -12,19 +12,23 @@ router.get('/', async (req, res) => {
   // query param
   const { url } = req.query;
 
-  try {
-    await wappalyzer.init();
+  if (url !=='') {
+    try {
+      await wappalyzer.init();
 
-    const results = await wappalyzer.open(url).analyze();
+      const { technologies } = await wappalyzer.open(url).analyze();
 
-    url !== '' && url.indexOf("http" || "https") > -1 
-      ? res.status(200 || 304).json(results.technologies) 
-      : res.status(400).json({ msg: 'URL invalid or null' });
-  } catch (err) {
-    res.status(500).json({ msg: err.message });
+      url !== '' && url.indexOf("http" || "https") > -1 
+        ? res.status(200 || 304).json(technologies) 
+        : res.status(400).json({ msg: 'URL invalid or null' });
+    } catch (err) {
+      res.status(500).json({ msg: err.message });
+    }
+
+    await wappalyzer.destroy();
+  } else {
+    res.status(404).json({ msg: 'not url found'});
   }
-
-  await wappalyzer.destroy();
 });
 
 // exports

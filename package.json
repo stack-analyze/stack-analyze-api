@@ -2,18 +2,17 @@
   "name": "stack-analyze-api",
   "version": "1.0.0",
   "description": "api open source for mobile/pwa or other devices",
-  "keywords": ["api", "stack-analyze", "api pwa"],
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
-  },
   "keywords": [
     "api",
     "stack-analyze",
     "intermachine",
     "express"
   ],
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
   "author": "omega5300",
   "license": "ISC",
   "dependencies": {
@@ -21,7 +20,7 @@
     "express": "^4.17.1",
     "morgan": "^1.10.0",
     "wappalyzer": "^6.5.26",
-    "whois": "^2.13.3"
+    "whois-light": "^1.0.3"
   },
   "devDependencies": {
     "eslint": "^7.20.0",
