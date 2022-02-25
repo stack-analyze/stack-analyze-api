@@ -16,9 +16,11 @@
   "author": "omega5300",
   "license": "ISC",
   "dependencies": {
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "morgan": "^1.10.0",
+    "node-fetch": "^3.1.0",
     "wappalyzer": "^6.9.2",
     "whois-light": "^1.1.2"
   },
