@@ -17,8 +17,6 @@ app.use(express.json());
 
 // routes
 app.use('/stack', require('./routes/stack'));
-app.use('/whois', require('./routes/dns'));
 
 // start server
 app.listen(port, () => console.info('api on port', port));
-
