@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "api open source for mobile/pwa or other devices",
   "type": "module",
+  "engines": {
+    "node": ">=16"
+  },
   "keywords": [
     "api",
     "stack-analyze",
@@ -17,7 +20,6 @@
   "author": "omega5300",
   "license": "ISC",
   "dependencies": {
-    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "morgan": "^1.10.0",
