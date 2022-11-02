@@ -2,6 +2,7 @@
   "name": "stack-analyze-api",
   "version": "1.0.0",
   "description": "api open source for mobile/pwa or other devices",
+  "type": "module",
   "keywords": [
     "api",
     "stack-analyze",
@@ -18,12 +19,12 @@
   "dependencies": {
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
-    "express": "^4.18.1",
+    "express": "^4.18.2",
     "morgan": "^1.10.0",
-    "wappalyzer": "^6.10.37"
+    "wappalyzer": "^6.10.45"
   },
   "devDependencies": {
-    "eslint": "^8.19.0",
-    "nodemon": "^2.0.19"
+    "eslint": "^8.26.0",
+    "nodemon": "^2.0.20"
   }
 }
