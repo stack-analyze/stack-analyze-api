@@ -22,7 +22,7 @@ router.get('/', async (req, res) => {
   try {
     await wappalyzer.init();
 
-    const { technologies } = await wappalyzer.open(url).analyze();
+    const { technologies } = await (await wappalyzer.open(url)).analyze();
 
     const stackResults = technologies.map(({
       slug,
